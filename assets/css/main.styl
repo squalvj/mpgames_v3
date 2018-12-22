@@ -1,303 +1,194 @@
-#container
+// @font-face
+//    font-family kievM
+//    src url(../fonts/kiev-medium.otf)
+//    font-style normal
+
+// VARIABLE------------------
+
+$openR = 'Open Sans', sans-serif;
+$bangers = 'Bangers', cursive;
+
+$blueNight = #353b48
+
+// ------------------VARIABLE
+
+// BASE------------------
+*,*:before,*:after
+   box-sizing border-box
+
+a
+   text-decoration: none
+
+body
+   margin 0
+   font-size 14px
+   font-family $openR
+   &.pattern
+      background-image: linear-gradient(rgba(0,0,0,0) 0,rgba(0,0,0,0) 1.26493px,#fff 1.26493px,#fff 12.6493px),linear-gradient(to right,#c8c3c7 0,#c8c3c7 1.26493px,#fff 1.26493px,#fff 12.6493px);
+      background-position: 69.3526px 20.0521px;
+      background-size: 12.6493px 12.6493px;
+
+.col-1
+   width 10%
+   flex 1 1 auto
+
+.col-2
+   width 20%
+   flex 1 1 auto
+
+.col-3
+   width 30%
+   flex 1 1 auto
+
+.col-4
+   width 40%
+   flex 1 1 auto
+
+.col-5
+   width 50%
+   flex 1 1 auto
+
+.col-6
+   width 60%
+   flex 1 1 auto
+
+.col-7
+   width 70%
+   flex 1 1 auto
+   
+.col-8
+   width 80%
+   flex 1 1 auto
+
+.col-9
+   width 90%
+   flex 1 1 auto
+
+.col-10
    width 100%
-   margin-top 70px
+   flex 1 1 auto
 
-.topnav
-   overflow hidden
-   background-color #e9e9e9
-   position fixed
-   top 0
-   width 100%
-   a
-      float left
-      display block
-      color black
-      text-align center
-      padding 14px 16px
-      text-decoration none
-      font-size 21px
-      &:hover
-         background-color #ddd
-         color black
-      &.active
-         background-color #2196F3
-         color white
-   .search-container
-      float right
-      button
-         float right
-         padding 6px 10px
-         margin-top 8px
-         margin-right 16px
-         background #ddd
-         font-size 24px
-         border none
-         cursor pointer
-         &:hover
-            background #ccc
-      input[type=text]
-         padding 6px
-         margin-top 8px
-         font-size 17px
-         border none
-      &.dropdown
-         display inline-block
-
-.topnav a, .dropbtn
-   display inline-block
-   color white
-   text-align center
-   padding 14 16
-   text-decoration none
-
-.dropdown-content
-   display none
-   position absolute
-   background-color #f9f9f9
-   min-width 160px
-   box-shadow 0px 8px 16px 0px rgba(0,0,0,0.2)
-   z-index 1
-   a
-      color black
-      padding 12px 16px
-      text-decoration none
-      display block
-      text-align left
-      &:hover
-         background-color #f1f1f1
-
-.dropdown
-   &:hover
-      .dropdown-content
-         display block
-
-@media screen and (max-width: 600px)
-   .topnav
-      .search-container
-         float none
-      input[type=text]
-         border 1px solid #ccc
-
-@media screen and (max-width: 600px)   
-   .topnav a, .topnav input[type=text], .topnav .search-container button
-      float none
-      display block
-      text-align left
-      width 100%
-      margin 0
-      padding 14px
-
-div
-   &.game
-      width 100%
-      height 220
-      border solid 1px
-      display flex
-      justify-content space-between
-      width 300px
-      &:hover
-         border 1px solid #777
-      img
-         width 120
-         height auto
-   &.judul
-      padding 15px
-      text-align center
-      width 121
-      word-wrap break-word
-   &.game-wts
-      width calc(100% / 6 - 20px)
-      height auto
-      margin 0 10px 20px
-      &:hover
-         border 1px solid #777
-      img
-         width 100%
-         height auto
-   &.judul-game
-      text-align center
-      word-wrap break-word
-      padding-left 10
-      padding-right 10
-
-.list_transaksi
-   height auto
-   max-width 66%
+.container
+   max-width 1360px
+   padding-left 30px
+   padding-right 30px
    margin-left auto
    margin-right auto
 
-.wtt
-   display grid
-   grid-template-columns repeat(auto-fit, minmax(273px, 1fr))
-   grid-gap 30px
-   width 100%
-   margin-top 36px
-   margin-bottom 30px
 
-.wts
-   width auto
+
+// ------------------BASE
+
+// MODIFIER--------------
+
+._flex
    display flex
+
+._flex-wrap
    flex-wrap wrap
-   padding 0 calc(100% / 200px)
-   margin 0 -10px
-   margin-top 36px
 
-.pembeli
-   width 150
-   height 200
+._just-btwn
+   justify-content: space-between
 
-.barang1
-   width 120px
-   height auto
-   text-align center
-   word-wrap break-word
-   float left
+._just-center
+   justify-content: center
 
-.barang2
-   float right
-   width 120px
-   height auto
-   text-align center
-   word-wrap break-word
+._just-end
+   justify-content: flex-end;
 
-.arrow
-   align-self center
+._align-center
+   align-items: center; 
 
-.arrow1
-   align-self center
-   transform rotate(180deg)
+._d-none
+   display none
 
-.garis-judul
-   height 2px
-   width 100%
-   background-color blue
-
-@media screen and (max-width: 1111px)
-   div
-      &.game-wts
-         width calc(100% / 4 - 20px)
-
-.pengiriman
-   margin-left 30px
-   background-color #8080802b
-   height 388px
-
-.deskripsi
-   height 500px
-   width 100%
-   margin-top 10px
-   iframe
-      width 100%
-      height 457px
-
-.pagination
-   display inline-block
-   margin-left 34%
-   a
-      color black
-      float left
-      padding 8px 16px
-      text-decoration none
-      transition background-color .3s
-      border 1px solid #ddd
-      &.active
-         background-color #4CAF50
-         color white
-         border 1px solid #4CAF50
-      &:hover
-         &:not(.active)
-               background-color #ddd
-
-@media screen and (max-width: 600px)
-   div
-      &.game-wts
-         width calc(100% - 20px)
-   .list_transaksi
-      max-width 100%
-      padding 0 30px
-   .pagination
-      display inline-block
-      margin-left 0px
-   #container
-      margin-top 310px
-      width 100%
-   .pengiriman
-      margin-left 0
-   .deskripsi
-      width auto
-      height auto
-      iframe
-         width auto
-         height auto
-
-#product
-   width 100%
-   height auto
-   display flex
-   flex-wrap wrap
-   margin-bottom 30px
-
-#gambar
-   img
-      width 300px
-      height auto
-      margin-right 50px
-
-.keterangan
-   font-weight medium
-   margin-bottom 5px
-   padding 3px
-   margin-right 50px
-   flex-wrap wrap
-   display flex;
-
-.rekomendasi
-   height 100%
-   width 100%
-
-.garis
-   width 100%
-   height 2px
-   background-color black
-
-.footer
-   width 100%
-   background-color #80808029
-   margin-top 70px
-   padding-left 30px
-   padding-right 30px
-   ul
-      list-style none
-   li
-      a
-         font-size small
-         margin 0 0 9px 0
-         color black
-      &:hover
-         color black
-
-.footer-column
-   width 190px
-   height auto
-   background-color #0000003d
-
-.list-game-harga
-   margin-left 82%
-   margin-top 30px
-
-.list-game-nama
-   margin-top 30px
-
-.list-game-product
-   width 100%
-   height 75px
-   border 2px solid
-   display flex
+._pointer
    &:hover
-      background-color grey
+      cursor pointer
+// MODIFIER--------------
 
-.list-game-foto
+
+// HEADER----------------
+
+header
+   padding 10px 0
+   border-bottom 1px solid $blueNight
+   background white
+   position relative
+   &:after
+      content ''
+      position absolute
+      height 10px
+      width 100%
+      bottom 0
+      left 0
+      box-shadow 0px 5px 10px -4px
+
+
+.wrapper-menu
+   ul
+      display flex
+      list-style-type none
+      margin 0
+      padding 0
+      margin-right -20px
+      li
+         font-family $bangers
+         font-size 24px
+         letter-spacing: 1px
+         > *
+            color $blueNight
+            padding 20px
+            display: block
+
+.form-login
+   display none
+
+.wrapper-logo
    img
-      border-radius 50%
-      width 90px
-      height 100%
+      width 100px
+
+// ----------------HEADER
+
+// FOOTER----------------
+
+footer
+   background white
+   position relative
+   padding-top 20px
+   border-top 1px solid black
+   p
+      font-family: $openR
+      font-size 12px
+   a
+      font-family: $bangers
+      font-size 18px
+      line-height 34px
+      color $blueNight
+      letter-spacing: 1px
+   ul
+      list-style-type none
+      padding 0
+      margin 0
+      margin-right 50px
+      li
+         display: flex
+         flex-direction column
+   &:after
+      content ''
+      position absolute
+      height 10px
+      width 100%
+      top 0
+      left 0
+      box-shadow 0px -5px 10px -4px
+
+
+// ----------------FOOTER
+
+// CONTENT---------------
+
+.content
+   min-height 75vh
+
+// ---------------CONTENT
