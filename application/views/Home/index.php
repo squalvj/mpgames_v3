@@ -5,7 +5,6 @@ session_start();
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/dist/css/main.css">
-      <link href="https://fonts.googleapis.com/css?family=Bangers|Open+Sans" rel="stylesheet">
    </head>
 
    <body class="pattern">
@@ -14,7 +13,27 @@ session_start();
       <!-- /header -->
       
       <div class="content">
-
+         <div class="container">
+            <div class="wrapper-content-home _flex">
+               <div class="col-2">
+               
+               </div>
+               <div class="col-8">
+                  <div class="wrapper-collection collection-home">
+                     <div class="wrapper-collection-item">
+                        <div class="wrapper-collection-item-image">
+                           <img src="<?= base_url() ?>assets/img/game/rdr.jpg">
+                        </div>
+                        <div class="wrapper-collection-item-desc">
+                           <a href="#" class="item-title">Red Dead Redemption Buruan</a>
+                           <a href="#" class="item-location">Jakarta</a>
+                           <span class="item-trader">squalvj</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       
       <!-- footer -->

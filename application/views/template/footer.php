@@ -2,7 +2,7 @@
    <div class="container">
       <div class="footer _flex _just-btwn">
          <div class="footer-left _flex">
-            <div class="col-2">
+            <div class="col-3">
                <ul>
                   <li>
                      <a href="#">Support</a>
@@ -13,7 +13,7 @@
                   </li>
                </ul>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                <ul>
                   <li>
                      <a href="#">FACEBOOK</a>
